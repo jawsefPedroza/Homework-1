@@ -1,3 +1,4 @@
+/* Styles for the header, navigation, and main content */
 header {
     background-color: #5f4b8b;
     color: white;
@@ -6,20 +7,29 @@ header {
     height: 200px;
     font-style: italic;
     font-size: large;
+    text-shadow: 2px 2px red;
 }
-body
-{
+
+body {
     counter-reset: section;
 }
-h2::before
-{
+
+h2::before {
     counter-increment: section;
     content: "Section " counter(section) ": ";
 }
+
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid black;
 }
 
 nav ul li {
@@ -37,21 +47,26 @@ section h2 {
     text-decoration: underline;
     margin-bottom: 10px;
     font-family: cursive;
+    text-decoration-style: wavy;
 }
 
 #background p {
     font-style: italic;
     margin-left: 10px;
+    text-decoration-line: underline overline;
+    text-decoration-color: hsla(0, 100%, 50%, 0.1);
+
 }
 
 p:first-child {
-    color:  hotpink;
-  } 
+    color: hotpink;
+}
 
 blockquote {
     border-left: 3px solid #4caf50;
     margin: 10px 0;
     padding-left: 10px;
+   
 }
 
 #image {
@@ -59,34 +74,31 @@ blockquote {
     margin-top: 20px;
     opacity: 0.5;
     filter: grayscale(100%);
-
 }
 
 img:hover {
     transform: scaleX(-1);
-  }
+}
 
 #image img {
     max-width: 100%;
     border: 3px solid #333;
     border-radius: 20%;
-
 }
 
 #hobbies {
     margin-top: 20px;
     font-weight: 100;
+   
 }
 
 #hobbies h5 {
     font-size: 20px;
     color: #333;
-    
 }
 
 #hobbies dl {
     margin-left: 20px;
-    
 }
 
 #hobbies dt {
@@ -109,18 +121,21 @@ footer {
 footer p {
     margin: 5px 0;
     resize: horizontal;
-  overflow: auto;
+    overflow: auto;
+    writing-mode: vertical-lr;
 }
 
 footer a {
     color: #ffd700;
     text-decoration: none;
+   
 }
 
 footer a:hover {
     text-decoration: underline;
-}
+   
 
+}
 
 header a {
     color: #fff;
@@ -149,8 +164,8 @@ button:hover {
 }
 
 
-#History
-{
+
+#History {
     background: #4CAF50;
     color: white;
     padding: 15px;
@@ -158,40 +173,53 @@ button:hover {
     height: 100px;
     overflow: scroll;
     border: 1px solid #ccc;
-}
-
-#backImage {
-    background-image: url('bully1.jpeg'); 
-    background-size: cover; 
-    background-position: center; 
-    position: relative; 
-    color: white; 
-    padding: 20px; 
+    text-indent: 25px;
+    text-emphasis: '*';
+    word-spacing: 50px;
+    word-break: break-all;
 
 }
 
-#backImage p {
-    z-index: 1; 
-}
+
 .dropdown {
     position: relative;
     display: inline-block;
-    
-  }
+    z-index: 1; 
+}
 
+#backImage p {
+    z-index: 1;
+}
+
+.toy1
+{
+    width: 1500px;
+    height: 700px;
+    margin: auto;
+    outline: 20px;
+    outline-style: groove;
+    outline-width: 30px;
+    background-image: url('toy.jpeg');
+    background-repeat: no-repeat;
+    background-position-y: center;
+    scale: 0.8;
+    rotate: x 60deg;
+    transform-origin: center top;
+    top: 50px;
+
+}
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-  
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .historyNirvana {
@@ -200,16 +228,20 @@ button:hover {
     overflow-y: scroll;
     background: url(NirvanaPP.jpeg) no-repeat;
     -webkit-mask-image: linear-gradient(black, transparent);
-    mask-image: linear-gradient (black, transparent);
-  }
+    mask-image: linear-gradient(black, transparent);
 
-   .historyNirvana{
+}
+
+.historyNirvana {
     font-size: 100px;
     padding: 40px;
     color: black;
-  }
+    text-transform: capitalize;
+    text-align: center;
+    text-align-last: justify;
+}
 
-  .expand-box {
+.expand-box {
     width: 100px;
     height: 100px;
     background-color: green;
@@ -220,44 +252,159 @@ button:hover {
     width: 1415px;
 }
 
+
+.about-me {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.hobbies img {
+    max-width: 100%;
+    border: 3px solid #ffd700;
+    float: right;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+}
+
+.favorites {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.favorites th,
+.favorites td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.favorites tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.audio-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.poem {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.congratulations {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.congratulations button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.congratulations button:hover {
+    background-color: #555;
+}
+
+.color-changing-box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    animation: colorChange 3s linear infinite;
+}
+
+#backImage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: red;
+    }
+
+    33% {
+        background-color: blue;
+    }
+
+    66% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+nav ul li a:active {
+    color: green;
+}
+
 @media (max-width: 768px) {
-    header {
-        height: 100px;
+    .hobbies img {
+        float: none;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
-    header h1 {
-        font-size: 24px; 
+    .favorites {
+        width: auto;
     }
 
-    header hr {
-        margin-top: 5px; 
+    .favorites th,
+    .favorites td {
+        font-size: 14px;
     }
 
-    nav ul li {
-        margin-right: 10px; 
-    }
-
-    #background p {
-        margin-left: 5px; 
-    }
-
-    #image img {
-        border-radius: 10%;
-    }
-
-    #hobbies {
+    .audio-container {
         margin-top: 10px;
     }
 
-    #hobbies h5 {
-        font-size: 18px;
+    .poem {
+        padding: 10px;
     }
 
-    #History {
-        width: 100%;
+    .congratulations button {
+        padding: 8px 16px;
     }
 
-    .dropdown-content {
-        min-width: 120px;
+    .color-changing-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    nav ul li::after {
+        display: none;
     }
 }
