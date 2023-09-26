@@ -362,4 +362,17 @@ nav ul li a:active {
     nav ul li::after {
         display: none;
     }
+
+    .expand-box {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        transition: width 5s ease;
+        margin: 0 auto; 
+        max-width: 80%; 
+    }
+    
+    .expand-box:hover {
+        width: 1415px;
+    }
 }
